@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TravelX</title>
+    <link rel="stylesheet" href="newstyle1.css">
+    <link rel="stylesheet" href="newStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- home section starts here  -->
+    <section class="home">
+        <div class="home-box">
+            <nav>
+                <div class="logo bars">
+                    <div class="bar">
+                        <i class="fa fa-bars"></i>
+                    </div>
+                    <h3>Gusto mo ba ng Pupuntahan? <br> Arat na sa bayan ng Pagbilao</h3>
+                </div>
+                <div class="menu">
+                    <div class="close">
+                        <i class="fa fa-close"></i>
+                    </div>
+                    <ul>
+                        <li onclick="myFunctionHOME()"><a href="#">home</a></li>
+                    
+                        
+                    </ul>
+                </div>
+             
+                 
+                </div>
+            </nav>
+
+           
+        </div>
+    </section>
+    <!-- home section ends here  -->
+
+    <!-- destinatons section starts here  -->
+    <section class="destinations">
+        <h4 class="label"><img src=HISTORICALPLACES.jpg  alt=""></h4>
+        <div class="container">
+            <div class="container-box">
+                <h2 class="heading">ST. CATHERINE OF ALEXANDRIA PARISH </h2>
+                <div class="content">
+                    <p>The town of Pagbilao was founded in the early 17th century by a couple named Pablo and Rita. They were pioneers who ventured into the wilderness and settled in the area. The name Pagbilao comes from a misunderstanding between the original settlers and Spanish missionaries. The settlers' words for "bamboo bed" (papag) and "winnowing basket" (bilao) were combined by the Spanish to create the town's name (PAGBILAO) . </p>
+                    <a href="#"onclick="myFunctionTROPICAL()">Location: Brgy. Ilayang Bagumbungan Pagbilao, Quezon <i class="fa fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+        <h4 class="label"><img src=""alt=""></h4>
+        <div class="container">
+            <div class="container-box">
+                <h2 class="heading">TROPILOK</h2>
+                <div class="content">
+                    <p>The town of Pagbilao was founded in the early 17th century by a couple named Pablo and Rita. They were pioneers who ventured into the wilderness and settled in the area. The name Pagbilao comes from a misunderstanding between the original settlers and Spanish missionaries. The settlers' words for "bamboo bed" (papag) and "winnowing basket" (bilao) were combined by the Spanish to create the town's name (PAGBILAO) . </p>
+                    <a href="#">Location: Brgy. Ilayang Bagumbungan Pagbilao Quezon<i class="fa fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+        <h4 class="label"><img src=""alt=""></h4>
+        <div class="container">
+            <div class="container-box">
+                <h2 class="heading">MAGLASANG RESORT</h2>
+                <div class="content">
+                    <p>The town of Pagbilao was founded in the early 17th century by a couple named Pablo and Rita. They were pioneers who ventured into the wilderness and settled in the area. The name Pagbilao comes from a misunderstanding between the original settlers and Spanish missionaries. The settlers' words for "bamboo bed" (papag) and "winnowing basket" (bilao) were combined by the Spanish to create the town's name (PAGBILAO) . </p>
+                    <a href="#" onclick="myFunctionURL()">Location: Brgy. Ilayang Bagumbungan Pagbilao Quezon <i class="fa fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="comment-section">
+        <h3>Comments</h3>
+        <div class="comments-container">
+            <!-- Comments will be displayed here -->
+        </div>
+        <textarea id="commentInput" placeholder="Write your comment here..."></textarea>
+        <button onclick="addComment()">Submit</button>
+    </section>
+
+    <!-- destinatons section ends here  -->
+
+    <!-- featured 
+
+    <-- footer section starts here  -->
+    <footer>
+        <section class="footer">
+            <div class="container">
+                <div class="detail">
+                    <h3>PAGBILAO</h3>
+                    <p>ENJOY, HAVE FUN , AND EXPERIENCES OUR CULTURES AND TRADITION</p>
+                    <h5>Give us some feedback</h5>
+                    <a href="#"> tripsyhouston@gmail.com</a>
+                    <div class="social">
+                        <a href="#" onclick="myFunctionFB()" ><i class="fa fa-facebook-square"></i></a>
+                    </div>
+                </div>
+                <div class="about-us">
+                    <h2>LGU PAGBILAO</h2>
+                    <li><a href="#">about us</a></li>
+                    <li><a href="#">Pagbilao Municipal Hall, Rizal St., <br>Brgy. Sta. Catalina, Pagbilao, Quezon</a></li>
+                    <li><a href="#">Telephone No.:  <span>(042) 797-0937</span></a></li>
+                </div>
+                <div class="about-us">
+                    <h4>EMERGENCY HOTLINES</h4>
+                    <li><a href="#">Philippine National Police</a></li>
+                    <li><a href="#">Telephone No.: <span>(042)797-2854</span></a></li>
+                    <li><a href="#">Bureau of Fire Protection</a></li>
+                    <li><a href="#">Telephone No.: <span>(042)797-0932</span></a></li>
+                    <li><a href="#">Municipal Health Office</a></li>
+                    <li><a href="#">Telephone No.: <span>(042)797-3092</span></a></li>
+                </div>
+               
+            </div>
+
+            <div class="copyright">
+                <div>
+                    &copy;2024 -Pagbilao, Quezon, Philippines. all rights reserved
+                </div>
+                <div>
+                    <a href="#">term & conditions</a>
+                    <a href="#">privacy policy</a>
+                </div>
+            </div>
+        </section>
+    </footer>
+    <!-- footer section ends here  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js" integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/ScrollTrigger.min.js" integrity="sha512-OzC82YiH3UmMMs6Ydd9f2i7mS+UFL5f977iIoJ6oy07AJT+ePds9QOEtqXztSH29Nzua59fYS36knmMcv79GOg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="newscript.js"></script>
+</body>
+</html>

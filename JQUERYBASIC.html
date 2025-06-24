@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>jQuery Event Methods</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+   
+    <h1>------------------------------------------------------ Mouse Event Methods ------------------------------------------------------</h1><br>
+    <div class="center-container">
+        <button id="click-btn"><h3>Click Method</h3></button><br>
+    </div>
+    <div class="center-container">
+        <button id="dblclick-btn"><h4>Double Click Method</h4></button><br>
+    </div>
+    <p id="scroll-output"><h1>----------------------------------------------------------- Scroll Method ------------------------------------------------------------</h1></p><br>
+    <div class="center-container">
+        <div id="hover-box" class="rectangle1">Hover Method</div>
+        <div id="mouseenter-box" class="rectangle">Mouse Enter Method</div>
+        <div id="mouseleave-box" class="rectangle">Mouse Leave Method</div>
+    </div>
+    <h1>------------------------------------------------- Keyboard Event Methods -------------------------------------------------------</h1>
+    <div class="center-container">
+        Enter your name: <input type="text" id="keypress">
+    </div>
+    <div class="center-container">
+        <br><br><p>Keypresses: <span>0</span></p>
+    </div>
+    <div class="center-container">
+        <p id="keydown-output" class="rectangle1">Press any key down</p>
+    </div>
+    <div class="center-container">
+        <p id="keyup-output" class="rectangle1">Press any key up</p>
+    </div>
+    <h1>----------------------------------------------------------- Form Event Methods --------------------------------------------------</h1>
+    <div class="center-container">
+        <input type="text" id="change-input" placeholder="Change Method"><br>
+        <p id="change-output"></p>
+    </div>
+    <div class="center-container">
+        <br> <label for="input1">Focus Method:</label>
+        <input type="text" id="input1">
+        <span style="display:none;">Focused</span>
+    </div>
+    <div class="center-container">
+        <br><br>
+        <form action="">
+            Submit your name <br><br>
+            First name: <input type="text" name="FirstName" value="Charl"><br><br>
+            Last name: <input type="text" name="LastName" value="Revadenera">
+            <div class="center-container">
+                <input type="submit" value="Submit">
+            </div>
+        </form> 
+    </div>
+    <div class="center-container">
+        <p id="resize-output">Resize the window</p><br>
+    </div>
+   
+    <script>
+        $(document).ready(function() {
+            // Click method
+            $("#click-btn").click(function() {
+                alert("Button Clicked!");
+            });
+
+            // Double click method
+            $("#dblclick-btn").dblclick(function() {
+                alert("Button Double Clicked!");
+            });
+
+            // Hover method
+            $("#hover-box").hover(
+                function() { $(this).addClass('hovered'); },
+                function() { $(this).removeClass('hovered'); }
+            );
+
+            // Mouse enter method
+            $("#mouseenter-box").mouseenter(function() {
+                $(this).text("Mouse Entered!");
+            });
+
+            // Mouse leave method
+            $("#mouseleave-box").mouseleave(function() {
+                $(this).text("Mouse Left!");
+            });
+
+            // Keypress method
+            let i = 0;
+            $("#keypress").keypress(function() {
+                $("span").text(i += 1);
+            });
+
+            // Keydown method
+            $(document).keydown(function() {
+                $("#keydown-output").text("Key down event detected!");
+            });
+
+            // Keyup method
+            $(document).keyup(function() {
+                $("#keyup-output").text("Key up event detected!");
+            });
+
+            // Change method
+            $("#change-input").change(function() {
+                $("#change-output").text("Input value changed to: " + $(this).val());
+            });
+
+            // Focus and blur method
+            $("input").focus(function() {
+                $(this).next("span").show();
+
+            }).blur(function() {
+                $(this).next("span").text("Blur").fadeOut("slow");
+            })
+            .focus(function() {
+                $(this).next("span").text("Focused");
+            });
+
+            // Submit method
+            $("form").submit(function() {
+                alert("Submitted");
+            });
+
+            // Scroll method
+            $(window).scroll(function() {
+                $("#scroll-output").text("You are scrolling!");
+            });
+
+            // Resize method
+            $(window).resize(function() {
+                $("#resize-output").text("Window resized!");
+            });
+        });
+    
+            // Ready Method
+            $("Ready").ready(function(){
+                alert("THIS SITE IS READY")
+            });
+
+    </script>
+    <style>
+        body {
+            font-family: 'Times New Roman', Times, serif;
+            margin: 20px;
+            background-color: beige;
+        }
+        .box {
+            width: 150px;
+            height: 100px;
+            border: 1px solid black;
+            margin-bottom: 10px;
+            text-align: center;
+            line-height: 100px;
+            align-items: center;
+        }
+        .rectangle, .rectangle1 {
+            width: 300px;
+            height: 100px;
+            border: 1px solid black;
+            margin-bottom: 10px;
+            text-align: center;
+            line-height: 100px;
+        }
+        .rectangle {
+            background-color: rgb(255, 0, 157);
+        }
+        .hovered {
+            background-color: blue;
+        }
+        .focused {
+            border: 2px solid yellow;
+        }
+        .center-container {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+    </style>
+</body>
+</html>
